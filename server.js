@@ -11,6 +11,7 @@ const userRoutes = require("./routes/user.route.js")
 const categoryRoutes = require("./routes/category.route.js")
 const productRoutes = require("./routes/product.route.js")
 const orderRoutes = require("./routes/order.route.js")
+const stripeRoutes = require("./routes/stripePayment.route.js")
 
 // Database
 const DB_Connection = require("./db/db.connect.js")
@@ -26,6 +27,7 @@ app.use("/api", userRoutes)
 app.use("/api", categoryRoutes)
 app.use("/api", productRoutes)
 app.use("/api", orderRoutes)
+app.use("/api", stripeRoutes)
 
 // PORT
 const PORT = process.env.PORT
